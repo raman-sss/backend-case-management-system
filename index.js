@@ -3,6 +3,7 @@ const app = express();
 const dotenv = require("dotenv");
 const rateLimit= require('express-rate-limit')
 const cors = require("cors");
+const testConnection = require("./dbConnection");
 // const AppError = require("./utilities/appError");
 // const globalErrorHandler= require('./controllers/errorController');
 
@@ -25,7 +26,7 @@ process.on("uncaughtException", (err) => {
 });
 
 // Connecting to the Database
-// connectDB();
+testConnection();
 
 // app.use("/", authRoutes);
 

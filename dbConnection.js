@@ -7,7 +7,6 @@ const sequelize = new Sequelize('vacaybeginslocal', 'root', 'root', {
   dialect: 'mysql',
   logging: true, // Set to true to see SQL queries in the console
 });
-
 const testConnection = async () => {
   try { 
     await sequelize.authenticate();
